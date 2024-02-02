@@ -1,0 +1,88 @@
+﻿@model ocenaocena.Models.AktywnoscBadawcza
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>AktywnoscBadawcza</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TytulProjektu" class="control-label"></label>
+                <input asp-for="TytulProjektu" class="form-control" />
+                <span asp-validation-for="TytulProjektu" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="ProjektWspolrealizowany" /> @Html.DisplayNameFor(model => model.ProjektWspolrealizowany)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="ZasiegProjektu" class="control-label"></label>
+                <input asp-for="ZasiegProjektu" class="form-control" />
+                <span asp-validation-for="ZasiegProjektu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NazwaLideraProjektu" class="control-label"></label>
+                <input asp-for="NazwaLideraProjektu" class="form-control" />
+                <span asp-validation-for="NazwaLideraProjektu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FunkcjaWProjekcie" class="control-label"></label>
+                <input asp-for="FunkcjaWProjekcie" class="form-control" />
+                <span asp-validation-for="FunkcjaWProjekcie" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InstytucjaFinansujacaProjekt" class="control-label"></label>
+                <input asp-for="InstytucjaFinansujacaProjekt" class="form-control" />
+                <span asp-validation-for="InstytucjaFinansujacaProjekt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NazwaKonkursu" class="control-label"></label>
+                <input asp-for="NazwaKonkursu" class="form-control" />
+                <span asp-validation-for="NazwaKonkursu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataZawarciaUmowy" class="control-label"></label>
+                <input asp-for="DataZawarciaUmowy" class="form-control" />
+                <span asp-validation-for="DataZawarciaUmowy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataZlozeniaWniosku" class="control-label"></label>
+                <input asp-for="DataZlozeniaWniosku" class="form-control" />
+                <span asp-validation-for="DataZlozeniaWniosku" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataRozpoczeciaProjektu" class="control-label"></label>
+                <input asp-for="DataRozpoczeciaProjektu" class="form-control" />
+                <span asp-validation-for="DataRozpoczeciaProjektu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataZakonczeniaProjektu" class="control-label"></label>
+                <input asp-for="DataZakonczeniaProjektu" class="form-control" />
+                <span asp-validation-for="DataZakonczeniaProjektu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserId" class="control-label"></label>
+                <input asp-for="UserId" class="form-control" />
+                <span asp-validation-for="UserId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

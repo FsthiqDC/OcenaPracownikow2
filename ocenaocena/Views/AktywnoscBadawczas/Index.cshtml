@@ -1,0 +1,101 @@
+﻿@model IEnumerable<ocenaocena.Models.AktywnoscBadawcza>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TytulProjektu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjektWspolrealizowany)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ZasiegProjektu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NazwaLideraProjektu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FunkcjaWProjekcie)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InstytucjaFinansujacaProjekt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NazwaKonkursu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataZawarciaUmowy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataZlozeniaWniosku)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataRozpoczeciaProjektu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataZakonczeniaProjektu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserId)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TytulProjektu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjektWspolrealizowany)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ZasiegProjektu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NazwaLideraProjektu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FunkcjaWProjekcie)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InstytucjaFinansujacaProjekt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NazwaKonkursu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataZawarciaUmowy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataZlozeniaWniosku)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataRozpoczeciaProjektu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataZakonczeniaProjektu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.AktywnoscBadawczaId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.AktywnoscBadawczaId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.AktywnoscBadawczaId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

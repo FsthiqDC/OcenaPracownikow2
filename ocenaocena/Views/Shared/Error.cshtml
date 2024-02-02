@@ -1,0 +1,25 @@
+﻿@model ErrorViewModel
+@{
+    ViewData["Title"] = "Błąd";
+}
+
+<h1 class="text-danger">Błąd.</h1>
+<h2 class="text-danger">Wystąpił błąd podczas przetwarzania Twojego żądania.</h2>
+
+@if (Model.ShowRequestId)
+{
+    <p>
+        <strong>ID żądania:</strong> <code>@Model.RequestId</code>
+    </p>
+}
+
+<h3>Tryb deweloperski</h3>
+<p>
+    Przełączenie na <strong>tryb deweloperski</strong> wyświetli bardziej szczegółowe informacje o błędzie, który wystąpił.
+</p>
+<p>
+    <strong>Tryb deweloperski nie powinien być włączony dla wdrożonych aplikacji.</strong>
+    Może to skutkować wyświetlaniem wrażliwych informacji odnośnie do wyjątków dla użytkowników końcowych.
+    W celu lokalnego debugowania, włącz tryb <strong>deweloperski</strong>, ustawiając zmienną środowiskową <strong>ASPNETCORE_ENVIRONMENT</strong> na <strong>Deweloperskie</strong>
+    i ponownie uruchamiając aplikację.
+</p>
