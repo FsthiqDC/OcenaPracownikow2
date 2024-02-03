@@ -33,23 +33,22 @@ namespace ocenaocena.Models
         public string? NazwaKonkursu { get; set; }
 
         [Required(ErrorMessage = "Pole 'Data zawarcia umowy' jest wymagane.")]
-        [Column(TypeName = "Date")]
+        [DataType(DataType.Date)]
         public DateTime DataZawarciaUmowy { get; set; }
 
         [Required(ErrorMessage = "Pole 'Data złożenia wniosku' jest wymagane.")]
-        [Column(TypeName = "Date")]
+        [DataType(DataType.Date)]
         public DateTime DataZlozeniaWniosku { get; set; }
 
-        [Column(TypeName = "Date")]
+        [DataType(DataType.Date)]
         public DateTime DataRozpoczeciaProjektu { get; set; }
 
-        [Column(TypeName = "Date")]
+        [DataType(DataType.Date)]
         public DateTime DataZakonczeniaProjektu { get; set; }
 
         [ForeignKey("AppUserId")]  // Poprawione na "AppUserId"
         public virtual AppUser? User { get; set; }
         public int UserId { get; set; }
- 
     }
 
 

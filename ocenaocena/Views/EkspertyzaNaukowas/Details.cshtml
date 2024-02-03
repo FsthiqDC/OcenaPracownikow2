@@ -1,0 +1,36 @@
+﻿@model ocenaocena.Models.EkspertyzaNaukowa
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>EkspertyzaNaukowa</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NazwaInstytucjiZlecajacej)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NazwaInstytucjiZlecajacej)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TytulEkspertyzyOpracowaniaNaukowego)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TytulEkspertyzyOpracowaniaNaukowego)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TerminPrzekazania)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TerminPrzekazania)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.EkspertyzaNaukowaId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

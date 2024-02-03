@@ -1,0 +1,49 @@
+﻿@model ocenaocena.Models.PozostalaDzialalnoscNaukowa
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>PozostalaDzialalnoscNaukowa</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="PozostalaDzialalnoscNaukowaId" />
+            <div class="form-group">
+                <label asp-for="Rola" class="control-label"></label>
+                <input asp-for="Rola" class="form-control" />
+                <span asp-validation-for="Rola" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NazwaOrganizacji" class="control-label"></label>
+                <input asp-for="NazwaOrganizacji" class="form-control" />
+                <span asp-validation-for="NazwaOrganizacji" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TerminDzialalnosciOd" class="control-label"></label>
+                <input asp-for="TerminDzialalnosciOd" class="form-control" />
+                <span asp-validation-for="TerminDzialalnosciOd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TerminDzialalnosciDo" class="control-label"></label>
+                <input asp-for="TerminDzialalnosciDo" class="form-control" />
+                <span asp-validation-for="TerminDzialalnosciDo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

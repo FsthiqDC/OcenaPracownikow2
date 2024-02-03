@@ -1,0 +1,54 @@
+﻿@model ocenaocena.Models.NagrodaWyroznienie
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>NagrodaWyroznienie</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NagrodaMinistraNazwa)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NagrodaMinistraNazwa)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NagrodaMinistraTerminOtrzymania)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NagrodaMinistraTerminOtrzymania)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NagrodaRektoraNazwa)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NagrodaRektoraNazwa)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NagrodaRektoraTerminOtrzymania)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NagrodaRektoraTerminOtrzymania)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NagrodaOrganizacjiNazwa)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NagrodaOrganizacjiNazwa)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NagrodaOrganizacjiTerminOtrzymania)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NagrodaOrganizacjiTerminOtrzymania)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.NagrodaWyroznienieId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

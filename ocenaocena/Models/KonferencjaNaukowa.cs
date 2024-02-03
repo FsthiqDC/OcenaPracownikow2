@@ -33,5 +33,9 @@ namespace ocenaocena.Models
         [Required(ErrorMessage = "Pole 'Nazwa organizatora konferencji' jest wymagane.")]
         [MaxLength(255)]
         public string? NazwaOrganizatoraKonferencji { get; set; }
+
+        [ForeignKey("AppUserId")]  // Poprawione na "AppUserId"
+        public virtual AppUser? User { get; set; }
+        public int UserId { get; set; }
     }
 }

@@ -19,5 +19,9 @@ namespace ocenaocena.Models
         [DataType(DataType.Date)]
         public DateTime TerminPrzekazania { get; set; }
 
+        [ForeignKey("AppUserId")]  // Poprawione na "AppUserId"
+        public virtual AppUser? User { get; set; }
+        public int UserId { get; set; }
+
     }
 }

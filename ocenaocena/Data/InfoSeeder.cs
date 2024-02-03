@@ -36,12 +36,12 @@ namespace ocenaocena.data
                 }).Wait();
             }
 
-            if (!dbContext.Roles.Any(r => r.Name == "author"))
+            if (!dbContext.Roles.Any(r => r.Name == "pracownik"))
             {
                 roleStore.CreateAsync(new IdentityRole
                 {
-                    Name = "author",
-                    NormalizedName = "author"
+                    Name = "pracownik",
+                    NormalizedName = "pracownik"
                 }).Wait();
             }
         }  // koniec ról
@@ -49,71 +49,47 @@ namespace ocenaocena.data
         //zakładanie kont uzytkowników w apliakcji, o ile nie istnieją
         private static void SeedUsers(ApplicationDbContext dbContext)
         {
-            if (!dbContext.Users.Any(u => u.UserName == "autor1@portal.pl"))
+            if (!dbContext.Users.Any(u => u.UserName == "jankowskij@ocenapracownikow.pl"))
             {
                 var user = new AppUser
                 {
-                    UserName = "autor1@portal.pl",
-                    NormalizedUserName = "autor1@portal.pl",
-                    Email = "autor1@portal.pl",
+                    UserName = "jankowskij@ocenapracownikow.pl",
+                    NormalizedUserName = "jankowskij@ocenapracownikow.pl",
+                    Email = "jankowskij@ocenapracownikow.pl",
                     EmailConfirmed = true,
                     LockoutEnabled = false,
-                    FirstName = "Piotr",
-                    LastName = "Pisarski",
-                    Photo = "autor1.jpg",
-                    Information = "Wszechstronny programista aplikacji sieciowych i internetowych. W portfolio ma kilka ciekawych projektów zrealizowanych dla firm z branży finansowej. Współpracuje z innowacyjnymi startupami."
+                    FirstName = "Jan",
+                    LastName = "Jankowski",
+                    Photo = "",
+                    Information = "Profesor z wieloletnim doświadczeniem"
                 };
                 var password = new PasswordHasher<AppUser>();
-                var hashed = password.HashPassword(user, "Portalik1!");
+                var hashed = password.HashPassword(user, "Ocena1234!");
                 user.PasswordHash = hashed;
 
                 var userStore = new UserStore<AppUser>(dbContext);
                 userStore.CreateAsync(user).Wait();
-                userStore.AddToRoleAsync(user, "author").Wait();
+                userStore.AddToRoleAsync(user, "pracownik").Wait();
 
                 dbContext.SaveChanges();
             }
 
-            if (!dbContext.Users.Any(u => u.UserName == "autor2@portal.pl"))
+            if (!dbContext.Users.Any(u => u.UserName == "admin@ocenapracownikow.pl"))
             {
                 var user = new AppUser
                 {
-                    UserName = "autor2@portal.pl",
-                    NormalizedUserName = "autor2@portal.pl",
-                    Email = "autor2@portal.pl",
+                    UserName = "admin@ocenapracownikow.pl",
+                    NormalizedUserName = "admin@ocenapracownikow.pl",
+                    Email = "admin@ocenapracownikow.pl",
                     EmailConfirmed = true,
                     LockoutEnabled = false,
-                    FirstName = "Anna",
-                    LastName = "Autorska",
-                    Photo = "autor2.jpg",
-                    Information = "Doświadczona programistka i projektantka stron internetowych oraz uznana blogierka. Specjalizuje się w HTML5, CSS3, JavaScript, jQuery i Bootstrap. Obecnie pracuje nad nowymi rozwiązaniami dla graczy."
+                    FirstName = "Admin",
+                    LastName = "Admin",
+                    Photo = "",
+                    Information = "Konto administracyjne"
                 };
                 var password = new PasswordHasher<AppUser>();
-                var hashed = password.HashPassword(user, "Portalik1!");
-                user.PasswordHash = hashed;
-
-                var userStore = new UserStore<AppUser>(dbContext);
-                userStore.CreateAsync(user).Wait();
-                userStore.AddToRoleAsync(user, "author").Wait();
-                dbContext.SaveChanges();
-            }
-
-            if (!dbContext.Users.Any(u => u.UserName == "admin@portal.pl"))
-            {
-                var user = new AppUser
-                {
-                    UserName = "admin@portal.pl",
-                    NormalizedUserName = "admin@portal.pl",
-                    Email = "admin@portal.pl",
-                    EmailConfirmed = true,
-                    LockoutEnabled = false,
-                    FirstName = "Ewa",
-                    LastName = "Ważna",
-                    Photo = "woman.png",
-                    Information = ""
-                };
-                var password = new PasswordHasher<AppUser>();
-                var hashed = password.HashPassword(user, "Portalik1!");
+                var hashed = password.HashPassword(user, "Ocena1234!");
                 user.PasswordHash = hashed;
 
                 var userStore = new UserStore<AppUser>(dbContext);

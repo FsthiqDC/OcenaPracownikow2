@@ -1,0 +1,189 @@
+﻿@model ocenaocena.Models.MonografiaNaukowa
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<h4>Dodaj monografię naukową</h4>
+<hr />
+<div class="row col-md-16 interspace justify-content-center">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TytulProjektu" class="control-label">Tytuł projektu</label>
+                <input asp-for="TytulProjektu" class="form-control" />
+                <span asp-validation-for="TytulProjektu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProjektRealizowanyJest" class="control-label">Projekt realizowany jest</label>
+                <input asp-for="ProjektRealizowanyJest" class="form-control" />
+                <span asp-validation-for="ProjektRealizowanyJest" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ZasiegProjektu" class="control-label">Zasięg projektu</label>
+                <input asp-for="ZasiegProjektu" class="form-control" />
+                <span asp-validation-for="ZasiegProjektu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NazwaLideraProjektu" class="control-label">Nazwa lidera projektu</label>
+                <input asp-for="NazwaLideraProjektu" class="form-control" />
+                <span asp-validation-for="NazwaLideraProjektu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FunkcjaWProjekcie" class="control-label">Funkcja w projekcie</label>
+                <input asp-for="FunkcjaWProjekcie" class="form-control" />
+                <span asp-validation-for="FunkcjaWProjekcie" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InstytucjaFinansujacaProjekt" class="control-label">Instytucja finansująca projekt</label>
+                <input asp-for="InstytucjaFinansujacaProjekt" class="form-control" />
+                <span asp-validation-for="InstytucjaFinansujacaProjekt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NazwaKonkursuProgramu" class="control-label">Nazwa konkurus programu</label>
+                <input asp-for="NazwaKonkursuProgramu" class="form-control" />
+                <span asp-validation-for="NazwaKonkursuProgramu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataZawarciaINumerUmowy" class="control-label">Data zawracia umowy</label>
+                <input asp-for="DataZawarciaINumerUmowy" class="form-control" />
+                <span asp-validation-for="DataZawarciaINumerUmowy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataZlozeniaWniosku" class="control-label">Data złożenia wniossku</label>
+                <input asp-for="DataZlozeniaWniosku" class="form-control" />
+                <span asp-validation-for="DataZlozeniaWniosku" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataRozpoczeciaPracy" class="control-label">Data rozpoczęcia pracy</label>
+                <input asp-for="DataRozpoczeciaPracy" class="form-control" />
+                <span asp-validation-for="DataRozpoczeciaPracy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataZakonczeniaPracy" class="control-label">Data zakończenia pracy</label>
+                <input asp-for="DataZakonczeniaPracy" class="form-control" />
+                <span asp-validation-for="DataZakonczeniaPracy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DyscyplinyNaukowe" class="control-label">Dyscyplina naukowa</label>
+                <input asp-for="DyscyplinyNaukowe" class="form-control" />
+                <span asp-validation-for="DyscyplinyNaukowe" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RolaMonografii" class="control-label"> Rola monografii</label>
+                <input asp-for="RolaMonografii" class="form-control" />
+                <span asp-validation-for="RolaMonografii" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DOI" class="control-label">DOI</label>
+                <input asp-for="DOI" class="form-control" />
+                <span asp-validation-for="DOI" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TytulMonografii" class="control-label">Tytuł monografii</label>
+                <input asp-for="TytulMonografii" class="form-control" />
+                <span asp-validation-for="TytulMonografii" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TytulRozdzialuMonografii" class="control-label">Tytuł rozdziału monografii</label>
+                <input asp-for="TytulRozdzialuMonografii" class="form-control" />
+                <span asp-validation-for="TytulRozdzialuMonografii" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ISBN" class="control-label">ISBN</label>
+                <input asp-for="ISBN" class="form-control" />
+                <span asp-validation-for="ISBN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LiczbaWszystkichAutorowMonografii" class="control-label">Liczba wszystkich autorów</label>
+                <input asp-for="LiczbaWszystkichAutorowMonografii" class="form-control" />
+                <span asp-validation-for="LiczbaWszystkichAutorowMonografii" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PozostaliWspolautorzyIRedaktorzyMonografii" class="control-label">Pozostali współautorzy oraz redaktorzy</label>
+                <input asp-for="PozostaliWspolautorzyIRedaktorzyMonografii" class="form-control" />
+                <span asp-validation-for="PozostaliWspolautorzyIRedaktorzyMonografii" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PozostaliWspolautorzyRozdzialu" class="control-label">Pozostali współatorzy rozdziału</label>
+                <input asp-for="PozostaliWspolautorzyRozdzialu" class="form-control" />
+                <span asp-validation-for="PozostaliWspolautorzyRozdzialu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumeryORCIDWspolautorowIRedaktorowMonografii" class="control-label">Numery ORCI współatorów i redaktorów monografii</label>
+                <input asp-for="NumeryORCIDWspolautorowIRedaktorowMonografii" class="form-control" />
+                <span asp-validation-for="NumeryORCIDWspolautorowIRedaktorowMonografii" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumeryORCIDWspolautorowRozdzialu" class="control-label">Numery ORCID współatorów rozdziału</label>
+                <input asp-for="NumeryORCIDWspolautorowRozdzialu" class="form-control" />
+                <span asp-validation-for="NumeryORCIDWspolautorowRozdzialu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WydawcaMonografii" class="control-label">Wydawca</label>
+                <input asp-for="WydawcaMonografii" class="form-control" />
+                <span asp-validation-for="WydawcaMonografii" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RokWydaniaMonografii" class="control-label">Rok wydania</label>
+                <input asp-for="RokWydaniaMonografii" class="form-control" />
+                <span asp-validation-for="RokWydaniaMonografii" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DyscyplinaNaukowaMonografii" class="control-label">Dyscyplina naukowa</label>
+                <input asp-for="DyscyplinaNaukowaMonografii" class="form-control" />
+                <span asp-validation-for="DyscyplinaNaukowaMonografii" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DyscyplinaNaukowaRozdzialuMonografii" class="control-label">Dyscyplina naukowa rozdziału</label>
+                <input asp-for="DyscyplinaNaukowaRozdzialuMonografii" class="form-control" />
+                <span asp-validation-for="DyscyplinaNaukowaRozdzialuMonografii" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NazwaPodmiotuUpowaznionegoMonografia" class="control-label">Nazwa podmiotu upoważnionego monografia</label>
+                <input asp-for="NazwaPodmiotuUpowaznionegoMonografia" class="form-control" />
+                <span asp-validation-for="NazwaPodmiotuUpowaznionegoMonografia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NazwaPodmiotuUpowaznionegoRozdzial" class="control-label">Nazwa podmiotu upoważnienego rozdział</label>
+                <input asp-for="NazwaPodmiotuUpowaznionegoRozdzial" class="form-control" />
+                <span asp-validation-for="NazwaPodmiotuUpowaznionegoRozdzial" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SposobUdostepnieniaMonografii" class="control-label">Sposób udostępniania monografii</label>
+                <input asp-for="SposobUdostepnieniaMonografii" class="form-control" />
+                <span asp-validation-for="SposobUdostepnieniaMonografii" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WersjaTekstuOtwarta" class="control-label">Wersja otwarta</label>
+                <input asp-for="WersjaTekstuOtwarta" class="form-control" />
+                <span asp-validation-for="WersjaTekstuOtwarta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LicencjaOtwarta" class="control-label">Licencja</label>
+                <input asp-for="LicencjaOtwarta" class="form-control" />
+                <span asp-validation-for="LicencjaOtwarta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataUdostepnieniaMonografii" class="control-label">Data udostępnienia monografii</label>
+                <input asp-for="DataUdostepnieniaMonografii" class="form-control" />
+                <span asp-validation-for="DataUdostepnieniaMonografii" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UdostepnienieNastapilo" class="control-label">Udostępnienie nastąpiło</label>
+                <input asp-for="UdostepnienieNastapilo" class="form-control" />
+                <span asp-validation-for="UdostepnienieNastapilo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Dodaj" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,138 @@
+﻿@model ocenaocena.Models.ArtykulNaukowy
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>ArtykulNaukowy</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Rola)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Rola)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DOI)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DOI)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TytulArtykuluNaukowego)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TytulArtykuluNaukowego)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TytulCzasopismaNaukowego)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TytulCzasopismaNaukowego)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ISSN)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ISSN)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RokOpublikowania)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RokOpublikowania)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TomZeszytCzasopisma)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TomZeszytCzasopisma)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NumeryStron)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NumeryStron)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LiczbaWszystkichAutorow)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LiczbaWszystkichAutorow)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PozostaliWspolautorzy)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PozostaliWspolautorzy)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DyscyplinaNaukowa)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DyscyplinaNaukowa)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NazwaPodmiotuUpowaznionego)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NazwaPodmiotuUpowaznionego)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NazwaKonferencji)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NazwaKonferencji)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DataKonferencji)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DataKonferencji)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MiejsceKonferencji)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MiejsceKonferencji)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SposobUdostepnienia)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SposobUdostepnienia)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.WersjaTekstuOtwarta)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.WersjaTekstuOtwarta)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LicencjaOtwarta)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LicencjaOtwarta)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DataUdostepnienia)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DataUdostepnienia)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.UdostepnienieNastapilo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UdostepnienieNastapilo)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.ArtykulNaukowyId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

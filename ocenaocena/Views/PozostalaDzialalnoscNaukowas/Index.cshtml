@@ -1,0 +1,48 @@
+﻿@model IEnumerable<ocenaocena.Models.PozostalaDzialalnoscNaukowa>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Rola)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NazwaOrganizacji)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TerminDzialalnosciOd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TerminDzialalnosciDo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rola)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NazwaOrganizacji)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TerminDzialalnosciOd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TerminDzialalnosciDo)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PozostalaDzialalnoscNaukowaId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.PozostalaDzialalnoscNaukowaId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.PozostalaDzialalnoscNaukowaId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

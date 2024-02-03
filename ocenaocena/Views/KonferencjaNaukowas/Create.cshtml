@@ -1,0 +1,59 @@
+﻿@model ocenaocena.Models.KonferencjaNaukowa
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<h4>Dodaj konferencję naukową</h4>
+<hr />
+<div class="row col-md-16 interspace justify-content-center">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Rola" class="control-label">Rola</label>
+                <input asp-for="Rola" class="form-control" />
+                <span asp-validation-for="Rola" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ZasiegKonferencji" class="control-label">Zasięg konferencji</label>
+                <input asp-for="ZasiegKonferencji" class="form-control" />
+                <span asp-validation-for="ZasiegKonferencji" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TytulReferatu" class="control-label">Tytuł referatu</label>
+                <input asp-for="TytulReferatu" class="form-control" />
+                <span asp-validation-for="TytulReferatu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NazwaKonferencji" class="control-label">Nazwa konferencji</label>
+                <input asp-for="NazwaKonferencji" class="form-control" />
+                <span asp-validation-for="NazwaKonferencji" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataKonferencji" class="control-label">Data konferencji</label>
+                <input asp-for="DataKonferencji" class="form-control" />
+                <span asp-validation-for="DataKonferencji" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MiejsceKonferencji" class="control-label">Miejsce konferencji</label>
+                <input asp-for="MiejsceKonferencji" class="form-control" />
+                <span asp-validation-for="MiejsceKonferencji" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NazwaOrganizatoraKonferencji" class="control-label">Nazwa organizatora</label>
+                <input asp-for="NazwaOrganizatoraKonferencji" class="form-control" />
+                <span asp-validation-for="NazwaOrganizatoraKonferencji" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Dodaj" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,42 @@
+﻿@model ocenaocena.Models.PozostalaDzialalnoscNaukowa
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>PozostalaDzialalnoscNaukowa</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Rola)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Rola)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NazwaOrganizacji)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NazwaOrganizacji)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TerminDzialalnosciOd)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TerminDzialalnosciOd)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TerminDzialalnosciDo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TerminDzialalnosciDo)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.PozostalaDzialalnoscNaukowaId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,216 @@
+﻿@model ocenaocena.Models.MonografiaNaukowa
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>MonografiaNaukowa</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TytulProjektu)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TytulProjektu)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ProjektRealizowanyJest)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ProjektRealizowanyJest)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ZasiegProjektu)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ZasiegProjektu)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NazwaLideraProjektu)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NazwaLideraProjektu)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FunkcjaWProjekcie)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FunkcjaWProjekcie)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.InstytucjaFinansujacaProjekt)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.InstytucjaFinansujacaProjekt)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NazwaKonkursuProgramu)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NazwaKonkursuProgramu)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DataZawarciaINumerUmowy)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DataZawarciaINumerUmowy)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DataZlozeniaWniosku)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DataZlozeniaWniosku)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DataRozpoczeciaPracy)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DataRozpoczeciaPracy)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DataZakonczeniaPracy)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DataZakonczeniaPracy)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DyscyplinyNaukowe)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DyscyplinyNaukowe)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RolaMonografii)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RolaMonografii)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DOI)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DOI)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TytulMonografii)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TytulMonografii)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TytulRozdzialuMonografii)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TytulRozdzialuMonografii)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ISBN)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ISBN)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LiczbaWszystkichAutorowMonografii)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LiczbaWszystkichAutorowMonografii)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PozostaliWspolautorzyIRedaktorzyMonografii)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PozostaliWspolautorzyIRedaktorzyMonografii)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PozostaliWspolautorzyRozdzialu)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PozostaliWspolautorzyRozdzialu)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NumeryORCIDWspolautorowIRedaktorowMonografii)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NumeryORCIDWspolautorowIRedaktorowMonografii)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NumeryORCIDWspolautorowRozdzialu)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NumeryORCIDWspolautorowRozdzialu)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.WydawcaMonografii)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.WydawcaMonografii)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RokWydaniaMonografii)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RokWydaniaMonografii)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DyscyplinaNaukowaMonografii)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DyscyplinaNaukowaMonografii)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DyscyplinaNaukowaRozdzialuMonografii)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DyscyplinaNaukowaRozdzialuMonografii)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NazwaPodmiotuUpowaznionegoMonografia)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NazwaPodmiotuUpowaznionegoMonografia)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NazwaPodmiotuUpowaznionegoRozdzial)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NazwaPodmiotuUpowaznionegoRozdzial)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SposobUdostepnieniaMonografii)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SposobUdostepnieniaMonografii)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.WersjaTekstuOtwarta)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.WersjaTekstuOtwarta)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LicencjaOtwarta)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LicencjaOtwarta)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DataUdostepnieniaMonografii)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DataUdostepnieniaMonografii)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.UdostepnienieNastapilo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UdostepnienieNastapilo)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.MonografiaNaukowaId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,64 @@
+﻿@model ocenaocena.Models.KonferencjaNaukowa
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>KonferencjaNaukowa</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="KonferencjaNaukowaId" />
+            <div class="form-group">
+                <label asp-for="Rola" class="control-label"></label>
+                <input asp-for="Rola" class="form-control" />
+                <span asp-validation-for="Rola" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ZasiegKonferencji" class="control-label"></label>
+                <input asp-for="ZasiegKonferencji" class="form-control" />
+                <span asp-validation-for="ZasiegKonferencji" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TytulReferatu" class="control-label"></label>
+                <input asp-for="TytulReferatu" class="form-control" />
+                <span asp-validation-for="TytulReferatu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NazwaKonferencji" class="control-label"></label>
+                <input asp-for="NazwaKonferencji" class="form-control" />
+                <span asp-validation-for="NazwaKonferencji" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataKonferencji" class="control-label"></label>
+                <input asp-for="DataKonferencji" class="form-control" />
+                <span asp-validation-for="DataKonferencji" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MiejsceKonferencji" class="control-label"></label>
+                <input asp-for="MiejsceKonferencji" class="form-control" />
+                <span asp-validation-for="MiejsceKonferencji" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NazwaOrganizatoraKonferencji" class="control-label"></label>
+                <input asp-for="NazwaOrganizatoraKonferencji" class="form-control" />
+                <span asp-validation-for="NazwaOrganizatoraKonferencji" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

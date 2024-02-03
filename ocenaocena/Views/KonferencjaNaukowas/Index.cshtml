@@ -1,0 +1,67 @@
+﻿@model IEnumerable<ocenaocena.Models.KonferencjaNaukowa>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Rola)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ZasiegKonferencji)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TytulReferatu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NazwaKonferencji)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataKonferencji)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MiejsceKonferencji)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NazwaOrganizatoraKonferencji)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rola)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ZasiegKonferencji)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TytulReferatu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NazwaKonferencji)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataKonferencji)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MiejsceKonferencji)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NazwaOrganizatoraKonferencji)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.KonferencjaNaukowaId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.KonferencjaNaukowaId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.KonferencjaNaukowaId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

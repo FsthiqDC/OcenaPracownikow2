@@ -13,7 +13,7 @@ namespace ocenaocena.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20240202032831_tabele")]
-    partial class tabele
+    partial class Tabele
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

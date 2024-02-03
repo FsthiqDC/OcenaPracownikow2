@@ -1,0 +1,222 @@
+﻿@model IEnumerable<ocenaocena.Models.MonografiaNaukowa>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TytulProjektu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjektRealizowanyJest)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ZasiegProjektu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NazwaLideraProjektu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FunkcjaWProjekcie)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InstytucjaFinansujacaProjekt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NazwaKonkursuProgramu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataZawarciaINumerUmowy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataZlozeniaWniosku)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataRozpoczeciaPracy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataZakonczeniaPracy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DyscyplinyNaukowe)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RolaMonografii)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DOI)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TytulMonografii)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TytulRozdzialuMonografii)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ISBN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LiczbaWszystkichAutorowMonografii)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PozostaliWspolautorzyIRedaktorzyMonografii)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PozostaliWspolautorzyRozdzialu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumeryORCIDWspolautorowIRedaktorowMonografii)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumeryORCIDWspolautorowRozdzialu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WydawcaMonografii)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RokWydaniaMonografii)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DyscyplinaNaukowaMonografii)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DyscyplinaNaukowaRozdzialuMonografii)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NazwaPodmiotuUpowaznionegoMonografia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NazwaPodmiotuUpowaznionegoRozdzial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SposobUdostepnieniaMonografii)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WersjaTekstuOtwarta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LicencjaOtwarta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataUdostepnieniaMonografii)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UdostepnienieNastapilo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TytulProjektu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjektRealizowanyJest)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ZasiegProjektu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NazwaLideraProjektu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FunkcjaWProjekcie)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InstytucjaFinansujacaProjekt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NazwaKonkursuProgramu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataZawarciaINumerUmowy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataZlozeniaWniosku)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataRozpoczeciaPracy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataZakonczeniaPracy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DyscyplinyNaukowe)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RolaMonografii)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DOI)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TytulMonografii)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TytulRozdzialuMonografii)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ISBN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LiczbaWszystkichAutorowMonografii)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PozostaliWspolautorzyIRedaktorzyMonografii)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PozostaliWspolautorzyRozdzialu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeryORCIDWspolautorowIRedaktorowMonografii)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeryORCIDWspolautorowRozdzialu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WydawcaMonografii)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RokWydaniaMonografii)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DyscyplinaNaukowaMonografii)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DyscyplinaNaukowaRozdzialuMonografii)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NazwaPodmiotuUpowaznionegoMonografia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NazwaPodmiotuUpowaznionegoRozdzial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SposobUdostepnieniaMonografii)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WersjaTekstuOtwarta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LicencjaOtwarta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataUdostepnieniaMonografii)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UdostepnienieNastapilo)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.MonografiaNaukowaId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.MonografiaNaukowaId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.MonografiaNaukowaId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

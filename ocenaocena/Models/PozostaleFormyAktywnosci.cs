@@ -12,6 +12,10 @@ namespace ocenaocena.Models
         [MaxLength(255)]
         public string? Opis { get; set; }
 
+        [ForeignKey("AppUserId")]  // Poprawione na "AppUserId"
+        public virtual AppUser? User { get; set; }
+        public int UserId { get; set; }
+
 
     }
 }

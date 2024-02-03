@@ -1,0 +1,145 @@
+﻿@model IEnumerable<ocenaocena.Models.ArtykulNaukowy>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Rola)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DOI)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TytulArtykuluNaukowego)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TytulCzasopismaNaukowego)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ISSN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RokOpublikowania)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TomZeszytCzasopisma)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumeryStron)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LiczbaWszystkichAutorow)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PozostaliWspolautorzy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DyscyplinaNaukowa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NazwaPodmiotuUpowaznionego)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NazwaKonferencji)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataKonferencji)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MiejsceKonferencji)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SposobUdostepnienia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WersjaTekstuOtwarta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LicencjaOtwarta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataUdostepnienia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UdostepnienieNastapilo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rola)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DOI)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TytulArtykuluNaukowego)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TytulCzasopismaNaukowego)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ISSN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RokOpublikowania)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TomZeszytCzasopisma)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeryStron)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LiczbaWszystkichAutorow)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PozostaliWspolautorzy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DyscyplinaNaukowa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NazwaPodmiotuUpowaznionego)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NazwaKonferencji)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataKonferencji)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MiejsceKonferencji)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SposobUdostepnienia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WersjaTekstuOtwarta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LicencjaOtwarta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataUdostepnienia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UdostepnienieNastapilo)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ArtykulNaukowyId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ArtykulNaukowyId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ArtykulNaukowyId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

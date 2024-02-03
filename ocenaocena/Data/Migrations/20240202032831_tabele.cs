@@ -5,7 +5,7 @@
 namespace ocenaocena.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class tabele : Migration
+    public partial class Tabele : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

@@ -1,0 +1,44 @@
+﻿@model ocenaocena.Models.DzialalnoscOrganizacyjna
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<h4>Dodaj organizację</h4>
+<hr />
+<div class="row col-md-16 interspace justify-content-center">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Rola" class="control-label">Rola organizacji</label>
+                <input asp-for="Rola" class="form-control" />
+                <span asp-validation-for="Rola" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ZasiegOrganizacji" class="control-label">Zasięg organizacji</label>
+                <input asp-for="ZasiegOrganizacji" class="form-control" />
+                <span asp-validation-for="ZasiegOrganizacji" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NazwaOrganizacji" class="control-label">Nazwa organizacji</label>
+                <input asp-for="NazwaOrganizacji" class="form-control" />
+                <span asp-validation-for="NazwaOrganizacji" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TerminPrzynaleznosci" class="control-label">Termin przynależności</label>
+                <input asp-for="TerminPrzynaleznosci" class="form-control" />
+                <span asp-validation-for="TerminPrzynaleznosci" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Dodaj" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

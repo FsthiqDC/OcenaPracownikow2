@@ -1,0 +1,54 @@
+﻿@model ocenaocena.Models.NagrodaWyroznienie
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<h4>Dodaj nagrody oraz wyróżeniania</h4>
+<hr />
+<div class="row col-md-16 interspace justify-content-center">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NagrodaMinistraNazwa" class="control-label">Nagroda Ministra</label>
+                <input asp-for="NagrodaMinistraNazwa" class="form-control" />
+                <span asp-validation-for="NagrodaMinistraNazwa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NagrodaMinistraTerminOtrzymania" class="control-label">Data otrzymania</label>
+                <input asp-for="NagrodaMinistraTerminOtrzymania" class="form-control" />
+                <span asp-validation-for="NagrodaMinistraTerminOtrzymania" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NagrodaRektoraNazwa" class="control-label">Nagroda Rektora</label>
+                <input asp-for="NagrodaRektoraNazwa" class="form-control" />
+                <span asp-validation-for="NagrodaRektoraNazwa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NagrodaRektoraTerminOtrzymania" class="control-label">Data otrzymania</label>
+                <input asp-for="NagrodaRektoraTerminOtrzymania" class="form-control" />
+                <span asp-validation-for="NagrodaRektoraTerminOtrzymania" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NagrodaOrganizacjiNazwa" class="control-label">Nagroda organizacji oraz jej nazwa</label>
+                <input asp-for="NagrodaOrganizacjiNazwa" class="form-control" />
+                <span asp-validation-for="NagrodaOrganizacjiNazwa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NagrodaOrganizacjiTerminOtrzymania" class="control-label">Data otrzymania</label>
+                <input asp-for="NagrodaOrganizacjiTerminOtrzymania" class="form-control" />
+                <span asp-validation-for="NagrodaOrganizacjiTerminOtrzymania" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Dodaj" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

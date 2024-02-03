@@ -65,5 +65,9 @@ namespace ocenaocena.Models
         public DateTime DataUdostepnienia { get; set; }
 
         public string? UdostepnienieNastapilo { get; set; }
+
+        [ForeignKey("AppUserId")]  // Poprawione na "AppUserId"
+        public virtual AppUser? User { get; set; }
+        public int UserId { get; set; }
     }
 }

@@ -283,10 +283,6 @@ namespace ocenaocena.Data.Migrations
                     b.Property<bool>("TwoFactorEnabled")
                         .HasColumnType("bit");
 
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("UserName")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
@@ -311,6 +307,9 @@ namespace ocenaocena.Data.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ArtykulNaukowyId"));
+
+                    b.Property<string>("AppUserId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("DOI")
                         .HasColumnType("nvarchar(max)");
@@ -375,10 +374,15 @@ namespace ocenaocena.Data.Migrations
                     b.Property<string>("UdostepnienieNastapilo")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
                     b.Property<string>("WersjaTekstuOtwarta")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ArtykulNaukowyId");
+
+                    b.HasIndex("AppUserId");
 
                     b.ToTable("ArtykulyNaukowe");
                 });
@@ -390,6 +394,9 @@ namespace ocenaocena.Data.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("DzialalnoscOrganizacyjnaId"));
+
+                    b.Property<string>("AppUserId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("NazwaOrganizacji")
                         .IsRequired()
@@ -404,12 +411,17 @@ namespace ocenaocena.Data.Migrations
                     b.Property<DateTime>("TerminPrzynaleznosci")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
                     b.Property<string>("ZasiegOrganizacji")
                         .IsRequired()
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
                     b.HasKey("DzialalnoscOrganizacyjnaId");
+
+                    b.HasIndex("AppUserId");
 
                     b.ToTable("DzialalnoscWOrganizacjachNaukowych");
                 });
@@ -421,6 +433,9 @@ namespace ocenaocena.Data.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("EkspertyzaNaukowaId"));
+
+                    b.Property<string>("AppUserId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("NazwaInstytucjiZlecajacej")
                         .IsRequired()
@@ -434,7 +449,12 @@ namespace ocenaocena.Data.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
                     b.HasKey("EkspertyzaNaukowaId");
+
+                    b.HasIndex("AppUserId");
 
                     b.ToTable("RealizacjaZleconychEkspertyz");
                 });
@@ -446,6 +466,9 @@ namespace ocenaocena.Data.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("KonferencjaNaukowaId"));
+
+                    b.Property<string>("AppUserId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("DataKonferencji")
                         .HasColumnType("datetime2");
@@ -474,11 +497,16 @@ namespace ocenaocena.Data.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
                     b.Property<string>("ZasiegKonferencji")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("KonferencjaNaukowaId");
+
+                    b.HasIndex("AppUserId");
 
                     b.ToTable("CzynnyUdzialWKonferencjach");
                 });
@@ -490,6 +518,9 @@ namespace ocenaocena.Data.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MonografiaNaukowaId"));
+
+                    b.Property<string>("AppUserId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("DOI")
                         .HasColumnType("nvarchar(max)");
@@ -591,6 +622,9 @@ namespace ocenaocena.Data.Migrations
                     b.Property<string>("UdostepnienieNastapilo")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
                     b.Property<string>("WersjaTekstuOtwarta")
                         .HasColumnType("nvarchar(max)");
 
@@ -603,6 +637,8 @@ namespace ocenaocena.Data.Migrations
 
                     b.HasKey("MonografiaNaukowaId");
 
+                    b.HasIndex("AppUserId");
+
                     b.ToTable("MonografieNaukowe");
                 });
 
@@ -613,6 +649,9 @@ namespace ocenaocena.Data.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("NagrodaWyroznienieId"));
+
+                    b.Property<string>("AppUserId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("NagrodaMinistraNazwa")
                         .HasMaxLength(255)
@@ -635,7 +674,12 @@ namespace ocenaocena.Data.Migrations
                     b.Property<DateTime?>("NagrodaRektoraTerminOtrzymania")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
                     b.HasKey("NagrodaWyroznienieId");
+
+                    b.HasIndex("AppUserId");
 
                     b.ToTable("NagrodyWyroznienia");
                 });
@@ -647,6 +691,9 @@ namespace ocenaocena.Data.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PozostalaDzialalnoscNaukowaId"));
+
+                    b.Property<string>("AppUserId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("NazwaOrganizacji")
                         .IsRequired()
@@ -664,7 +711,12 @@ namespace ocenaocena.Data.Migrations
                     b.Property<DateTime>("TerminDzialalnosciOd")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
                     b.HasKey("PozostalaDzialalnoscNaukowaId");
+
+                    b.HasIndex("AppUserId");
 
                     b.ToTable("PozostaleDzialalnosciNaukowe");
                 });
@@ -677,11 +729,19 @@ namespace ocenaocena.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PozostaleFormyAktywnosciId"));
 
+                    b.Property<string>("AppUserId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<string>("Opis")
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
                     b.HasKey("PozostaleFormyAktywnosciId");
+
+                    b.HasIndex("AppUserId");
 
                     b.ToTable("PozostaleFormyAktywnosci");
                 });
@@ -741,6 +801,78 @@ namespace ocenaocena.Data.Migrations
                 {
                     b.HasOne("ocenaocena.Models.AppUser", "User")
                         .WithMany("AktywnosciBadawcze")
+                        .HasForeignKey("AppUserId");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("ocenaocena.Models.ArtykulNaukowy", b =>
+                {
+                    b.HasOne("ocenaocena.Models.AppUser", "User")
+                        .WithMany()
+                        .HasForeignKey("AppUserId");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("ocenaocena.Models.DzialalnoscOrganizacyjna", b =>
+                {
+                    b.HasOne("ocenaocena.Models.AppUser", "User")
+                        .WithMany()
+                        .HasForeignKey("AppUserId");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("ocenaocena.Models.EkspertyzaNaukowa", b =>
+                {
+                    b.HasOne("ocenaocena.Models.AppUser", "User")
+                        .WithMany()
+                        .HasForeignKey("AppUserId");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("ocenaocena.Models.KonferencjaNaukowa", b =>
+                {
+                    b.HasOne("ocenaocena.Models.AppUser", "User")
+                        .WithMany()
+                        .HasForeignKey("AppUserId");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("ocenaocena.Models.MonografiaNaukowa", b =>
+                {
+                    b.HasOne("ocenaocena.Models.AppUser", "User")
+                        .WithMany()
+                        .HasForeignKey("AppUserId");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("ocenaocena.Models.NagrodaWyroznienie", b =>
+                {
+                    b.HasOne("ocenaocena.Models.AppUser", "User")
+                        .WithMany()
+                        .HasForeignKey("AppUserId");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("ocenaocena.Models.PozostalaDzialalnoscNaukowa", b =>
+                {
+                    b.HasOne("ocenaocena.Models.AppUser", "User")
+                        .WithMany()
+                        .HasForeignKey("AppUserId");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("ocenaocena.Models.PozostaleFormyAktywnosci", b =>
+                {
+                    b.HasOne("ocenaocena.Models.AppUser", "User")
+                        .WithMany()
                         .HasForeignKey("AppUserId");
 
                     b.Navigation("User");

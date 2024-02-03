@@ -1,0 +1,123 @@
+﻿@model ocenaocena.Models.ArtykulNaukowy
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h4>Dodaj artykuł naukowy</h4>
+<hr />
+<div class="row col-md-16 interspace justify-content-center">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Rola" class="control-label"></label>
+                <input asp-for="Rola" class="form-control" />
+                <span asp-validation-for="Rola" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DOI" class="control-label"></label>
+                <input asp-for="DOI" class="form-control" />
+                <span asp-validation-for="DOI" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TytulArtykuluNaukowego" class="control-label">Tytuł artykułu naukowego</label>
+                <input asp-for="TytulArtykuluNaukowego" class="form-control" />
+                <span asp-validation-for="TytulArtykuluNaukowego" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TytulCzasopismaNaukowego" class="control-label">Tytuł czasopisma naukowego</label>
+                <input asp-for="TytulCzasopismaNaukowego" class="form-control" />
+                <span asp-validation-for="TytulCzasopismaNaukowego" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ISSN" class="control-label"></label>
+                <input asp-for="ISSN" class="form-control" />
+                <span asp-validation-for="ISSN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RokOpublikowania" class="control-label">Rok publikacji</label>
+                <input asp-for="RokOpublikowania" class="form-control" />
+                <span asp-validation-for="RokOpublikowania" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TomZeszytCzasopisma" class="control-label">Ilość tomów</label>
+                <input asp-for="TomZeszytCzasopisma" class="form-control" />
+                <span asp-validation-for="TomZeszytCzasopisma" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumeryStron" class="control-label">Ile stron</label>
+                <input asp-for="NumeryStron" class="form-control" />
+                <span asp-validation-for="NumeryStron" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LiczbaWszystkichAutorow" class="control-label">Autor</label>
+                <input asp-for="LiczbaWszystkichAutorow" class="form-control" />
+                <span asp-validation-for="LiczbaWszystkichAutorow" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PozostaliWspolautorzy" class="control-label">Pozostali współautorzy</label>
+                <input asp-for="PozostaliWspolautorzy" class="form-control" />
+                <span asp-validation-for="PozostaliWspolautorzy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DyscyplinaNaukowa" class="control-label">Dyscyplina naukowa</label>
+                <input asp-for="DyscyplinaNaukowa" class="form-control" />
+                <span asp-validation-for="DyscyplinaNaukowa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NazwaPodmiotuUpowaznionego" class="control-label">Nazwa podmiotu upoważnionego</label>
+                <input asp-for="NazwaPodmiotuUpowaznionego" class="form-control" />
+                <span asp-validation-for="NazwaPodmiotuUpowaznionego" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NazwaKonferencji" class="control-label">Nazwa konferencji</label>
+                <input asp-for="NazwaKonferencji" class="form-control" />
+                <span asp-validation-for="NazwaKonferencji" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataKonferencji" class="control-label">Data konferencji</label>
+                <input asp-for="DataKonferencji" class="form-control" />
+                <span asp-validation-for="DataKonferencji" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MiejsceKonferencji" class="control-label">Miejsce konferencji</label>
+                <input asp-for="MiejsceKonferencji" class="form-control" />
+                <span asp-validation-for="MiejsceKonferencji" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SposobUdostepnienia" class="control-label">Sposób udostępnienia</label>
+                <input asp-for="SposobUdostepnienia" class="form-control" />
+                <span asp-validation-for="SposobUdostepnienia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WersjaTekstuOtwarta" class="control-label">Wersja tekstu</label>
+                <input asp-for="WersjaTekstuOtwarta" class="form-control" />
+                <span asp-validation-for="WersjaTekstuOtwarta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LicencjaOtwarta" class="control-label">Rodzaj licencji</label>
+                <input asp-for="LicencjaOtwarta" class="form-control" />
+                <span asp-validation-for="LicencjaOtwarta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataUdostepnienia" class="control-label">Data udostępnienia</label>
+                <input asp-for="DataUdostepnienia" class="form-control" />
+                <span asp-validation-for="DataUdostepnienia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UdostepnienieNastapilo" class="control-label">Udostępnienie nastąpiło</label>
+                <input asp-for="UdostepnienieNastapilo" class="form-control" />
+                <span asp-validation-for="UdostepnienieNastapilo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Dodaj" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

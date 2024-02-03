@@ -25,9 +25,164 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Polityka Prywatności</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Formularz" asp-action="Formularz">Formularz</a>
-                        </li>
+                        @{
+                            if (User.IsInRole("admin"))
+                            {
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle text-dark" href="#" role="button"
+                                   data-bs-toggle="dropdown" aria-expanded="false">
+                                    Administracja
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item">
+                                        <a class="dropdown-item nav-link text-dark" asp-area=""
+                                           asp-controller="AktywnoscBadawczas" asp-action="Index">Aktywność Badawcza</a>
+                                            
+                                           <a class="dropdown-item nav-link text-dark" asp-area=""
+                                               asp-controller="ArtykulNaukowies" asp-action="Index">Artykuły naukowe</a>
+                                           
+                                              <a class="dropdown-item nav-link text-dark" asp-area=""
+                                               asp-controller="DzialalnoscOrganizacyjnas" asp-action="Index">Dzialanosc organizacyjna</a>
+                                           
+                                               <a class="dropdown-item nav-link text-dark" asp-area=""
+                                               asp-controller="EkspertyzaNaukowas" asp-action="Index">Ekspertyzy naukowe</a>
+
+                                            <a class="dropdown-item nav-link text-dark" asp-area=""
+                                               asp-controller="MonografiaNaukowas" asp-action="Index">Monografie naukowe</a>
+                                            
+                                               <a class="dropdown-item nav-link text-dark" asp-area=""
+                                               asp-controller="KonferencjaNaukowas" asp-action="Index">Konferencje naukowe</a>
+                                            
+                                               <a class="dropdown-item nav-link text-dark" asp-area=""
+                                               asp-controller="NagrodaWyroznienies" asp-action="Index">Nagrody oraz wyróżnienia</a>
+
+                                            <a class="dropdown-item nav-link text-dark" asp-area=""
+                                               asp-controller="PozostalaDzialalnoscNaukowas" asp-action="Index">Pozostała działaność naukowa</a>
+
+                                            <a class="dropdown-item nav-link text-dark" asp-area=""
+                                               asp-controller="PozostaleFormyAktywnoscis" asp-action="Index">Pozostałe formy aktywności</a>
+                                    </li>
+                                </ul>
+                            </li>}
+
+
+                            @if (User.IsInRole("pracownik"))
+                            {
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle text-dark" href="#" role="button"
+                                   data-bs-toggle="dropdown" aria-expanded="false">
+                                    Dodaj
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item">
+
+                                    <li>
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="AktywnoscBadawczas"
+                                           asp-action="Create">Aktywność Badawczą</a>
+                                    </li>
+
+                                    <li>
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="ArtykulNaukowies"
+                                           asp-action="Create">Artykuł naukowy</a>
+                                    </li>
+
+                                    <li>
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="DzialalnoscOrganizacyjnas"
+                                           asp-action="Create">Działaność Organizacyjną</a>
+                                    </li>
+
+                                    <li>
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="EkspertyzaNaukowas"
+                                           asp-action="Create">Ekspertyze naukową</a>
+                                    </li>
+
+                                    <li>
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="KonferencjaNaukowas"
+                                           asp-action="Create">Konferencje naukową</a>
+                                    </li>
+
+                                    <li>
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="MonografiaNaukowas"
+                                           asp-action="Create">Monografie naukową</a>
+                                    </li>
+
+                                    <li>
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="NagrodaWyroznienies"
+                                           asp-action="Create">Nagrody oraz wyróżnienia</a>
+                                    </li>
+
+                                    <li>
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="PozostaladzialalnoscNaukowas"
+                                           asp-action="Create">Pozostałą działaność naukową</a>
+                                    </li>
+
+                                    <li>
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="PozostaleFormyAktywnoscis"
+                                           asp-action="Create">Pozostałe formy aktywności</a>
+                                    </li>
+                                    </ul>
+                                </li>
+
+                                 <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle text-dark" href="#" role="button"
+                                   data-bs-toggle="dropdown" aria-expanded="false">
+                                    Przeglądaj
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item">
+
+                                    <li>
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="AktywnoscBadawczas"
+                                           asp-action="Index">Aktywność Badawczą</a>
+                                    </li>
+
+                                    <li>
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="ArtykulNaukowies"
+                                               asp-action="Index">Artykuł naukowy</a>
+                                    </li>
+
+                                    <li>
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="DzialalnoscOrganizacyjnas"
+                                               asp-action="Index">Działaność Organizacyjną</a>
+                                    </li>
+
+                                    <li>
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="EkspertyzaNaukowas"
+                                               asp-action="Index">Ekspertyze naukową</a>
+                                    </li>
+
+                                    <li>
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="KonferencjaNaukowas"
+                                               asp-action="Index">Konferencje naukową</a>
+                                    </li>
+
+                                    <li>
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="MonografiaNaukowas"
+                                               asp-action="Index">Monografie naukową</a>
+                                    </li>
+
+                                    <li>
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="NagrodaWyroznienies"
+                                               asp-action="Index">Nagrody oraz wyróżnienia</a>
+                                    </li>
+
+                                    <li>
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="PozostaladzialalnoscNaukowas"
+                                               asp-action="Index">Pozostałą działaność naukową</a>
+                                    </li>
+
+                                    <li>
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="PozostaleFormyAktywnoscis"
+                                               asp-action="Index">Pozostałe formy aktywności</a>
+                                    </li>
+                                    </ul>
+                                </li>
+                                
+                            }
+                    }
+
+
+
                     </ul>
                     <partial name="_LoginPartial" />
                 </div>
